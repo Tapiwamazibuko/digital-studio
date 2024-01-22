@@ -36,6 +36,10 @@ body {
   height: 100%;
 }
 
+#root > div {
+  height: 100%;
+}
+
 .loading--background {
   background-image: radial-gradient(50% 50% at 50% 50%, #FFDCF7 0%, rgba(255, 166, 235, 0.72) 51.5%, rgba(224, 219, 255, 0.63) 100%);
   background-repeat: no-repeat;
@@ -118,11 +122,52 @@ body {
   text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header--container{
+  font-family: Poppins;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width:100%
+}
+
+.header--left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  left: 0%;
+  align-items: center;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.header--right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.header--left > h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header--right > h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  padding-right: 20px;
+}
+
+.header--right > button{
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  border: none;
 }
