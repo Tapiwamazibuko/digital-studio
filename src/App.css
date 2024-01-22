@@ -129,7 +129,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width:100%
+  width:100%;
 }
 
 .header--left{
@@ -170,4 +170,50 @@ body {
   width: 30px;
   border-radius: 25px;
   border: none;
+}
+
+.footer--container{
+  font-family: Poppins;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width:100%;
+  bottom: 10px;
+}
+
+.footer--right > h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  padding-right: 20px;
+  color: white;
+}
+
+.footer--left > button{
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  border: none;
+}
+
+.footer--left{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  left: 0%;
+  align-items: center;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.footer--right{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 20px;
 }
