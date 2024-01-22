@@ -29,11 +29,34 @@ html {
 }
 
 body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.loading--background {
   background-image: radial-gradient(50% 50% at 50% 50%, #FFDCF7 0%, rgba(255, 166, 235, 0.72) 51.5%, rgba(224, 219, 255, 0.63) 100%);
   background-repeat: no-repeat;
   height: 100%;
-  margin: 0;
   background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry--background {
+  background: radial-gradient(50% 50% at 50% 50%, #DCFFFF 0%, rgba(166, 218, 255, 0.72) 51.5%, rgba(255, 219, 245, 0.63) 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loading--container{
@@ -55,6 +78,44 @@ body {
   line-height: normal;
   letter-spacing: -2.52px;
   margin-top: 20%;
+}
+
+.entry--button{
+  background-color: white;
+  width: 107px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+  letter-spacing: -0.98px;
+}
+
+.entry--button--container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.entry--container{
+  bottom: 4rem;
+  height: 10%;
+}
+
+.entry--text{
+  color: #919191;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: -0.84px;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
