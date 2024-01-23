@@ -294,3 +294,67 @@ body {
   align-items: center;
   height: 100%;
 }
+
+.project--background {
+  background: radial-gradient(50% 50% at 50% 50%, #BDFCC0 0%, rgba(251, 170, 228, 0.72) 51.5%, rgba(209, 185, 248, 0.63) 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project--title{
+  display: grid;
+  grid-template: "a a ." minmax(50px, auto);
+  gap: 0px;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.project--top{
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: -0.84px;
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+
+.project--description{
+  display: grid;
+  grid-template: 150px / 400px auto auto;
+  grid-gap: 200px;
+}
+
+.project--description--title{
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.7px;
+}
+
+.project--description--text{
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}

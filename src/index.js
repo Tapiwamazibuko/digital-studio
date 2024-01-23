@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from './components/ErrorPage';
 import Projects from './Projects';
+import ProjectDescription from './ProjectDescription';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
   {
     path: "projects/",
     element: <Projects />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "projects/:projectId",
+    element: <ProjectDescription />,
     errorElement: <ErrorPage />
   },
 ]);
