@@ -128,7 +128,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width:100%;
 }
 
@@ -178,7 +178,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width:100%;
   bottom: 10px;
 }
@@ -246,4 +246,51 @@ body {
 .footer--star{
   font-size: 30px;
   color: #919191;
+}
+
+.projects--button{
+  background-color: white;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 35px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: normal;
+  letter-spacing: -0.98px;
+}
+
+.projects--background {
+  background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 153, 96, 0.72) 51.5%, rgba(239, 248, 185, 0.63) 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects--name{
+  text-transform: uppercase;
+  color: rgba(179, 100, 206, 0.62);
+  text-align: center;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: rgba(203, 203, 203, 0.80);
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0%;
+}
+
+.projects--container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
