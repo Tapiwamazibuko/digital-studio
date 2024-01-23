@@ -242,3 +242,8 @@ body {
   line-height: normal;
   letter-spacing: -0.98px;
 }
+
+.footer--star{
+  font-size: 30px;
+  color: #919191;
+}

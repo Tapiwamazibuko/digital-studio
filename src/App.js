@@ -8,19 +8,26 @@ import React from 'react';
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true)
+  const [hasEntered, setHasEntered] = React.useState(false)
+
   const stillLoading = async () => {
     setTimeout(() => {  setIsLoading(false); }, 3000);
+  }
+
+  function enter(){
+    console.log("clicked!")
+    setHasEntered(true)
   }
 
   stillLoading()
 
   return (
-    isLoading ? <LoadingScreen /> :
+    isLoading ? <LoadingScreen /> : hasEntered ?  
     <div>
       <Header />
       <Index />
       <Footer />
-    </div>   
+    </div>   : <EntryScreen entry={() => enter()}/>
   );
 }
 
