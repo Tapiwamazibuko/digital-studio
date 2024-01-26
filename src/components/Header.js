@@ -6,6 +6,10 @@ export default function Header(){
         fontFamily: "DM Serif Display",
         fontSize: "25px"
     }
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "400px";
+      }
+
     return (
         <nav className="header--container">
             <div className="header--left">
@@ -16,7 +20,7 @@ export default function Header(){
                 <h2>Index</h2>
                 <h2>Projects</h2>
                 <h2>Contact</h2>
-                <button type="button">• •</button>
+                <button type="button" onClick={openNav}>• •</button>
             </div>
         </nav>
     )
