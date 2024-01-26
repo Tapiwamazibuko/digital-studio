@@ -10,6 +10,7 @@ import {
 import ErrorPage from './components/ErrorPage';
 import Projects from './Projects';
 import ProjectDescription, {loader as projectLoader} from './ProjectDescription';
+import ContactScreen from './ContactScreen';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
     element: <ProjectDescription />,
     errorElement: <ErrorPage />,
     loader: projectLoader
+  },
+  {
+    path: "contact/",
+    element: <ContactScreen />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
