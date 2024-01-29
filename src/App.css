@@ -129,6 +129,14 @@ body {
   transform: 0.2s;
 }
 
+.left--span{
+  background: #919191;
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 112px;
+}
+
 
 .entry--button--container{
   display: flex;
@@ -151,7 +159,6 @@ body {
   font-weight: 200;
   line-height: normal;
   letter-spacing: -0.84px;
-  text-decoration: underline;
 }
 
 .header--container{
