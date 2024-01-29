@@ -12,7 +12,7 @@ function App() {
   const [hasEntered, setHasEntered] = React.useState(false)
 
   const stillLoading = async () => {
-    setTimeout(() => {  setIsLoading(false); }, 3000);
+    setTimeout(() => {  setIsLoading(false); }, 4000);
   }
 
   function enter(){
