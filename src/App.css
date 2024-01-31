@@ -129,6 +129,12 @@ body {
   transform: 0.2s;
 }
 
+.entry--button:active{
+  background-color: white !important;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
 .left--span{
   background: #919191;
   display: block;
@@ -236,6 +242,7 @@ body {
   width: 30px;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 }
 
 .footer--left{
@@ -281,6 +288,7 @@ body {
   font-weight: 275;
   line-height: normal;
   letter-spacing: -0.98px;
+  cursor: pointer;
 }
 
 .footer--star{
@@ -535,3 +543,61 @@ body {
   align-items: center;
 }
 
+#bars {
+  height: 10px;
+  left: 50%;
+  margin: -20px 0 0 -10px;
+  position: relative;
+  top: 60%;
+  width: 30px;
+}
+
+.bar {
+ background: black;
+  bottom: 0px;
+  height: 1px;
+  position: absolute;
+  width: 2px;      
+  animation: sound 0ms -800ms linear infinite alternate;
+}
+
+.white--bar {
+  background: white;
+   bottom: 5px;
+   height: 3px;
+   position: absolute;
+   width: 2px;      
+ }
+
+@keyframes sound {
+  0% {
+     opacity: .35;
+      height: 3px; 
+  }
+  100% {
+      opacity: 1;       
+      height: 15px;        
+  }
+}
+
+.white--bar:nth-child(1)  { left: 1px;}
+.white--bar:nth-child(2)  { left: 5px;}
+.white--bar:nth-child(3)  { left: 9px; }
+.white--bar:nth-child(4)  { left: 13px; }
+.white--bar:nth-child(5)  { left: 17px;}
+
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+.bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
+.bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
+.bar:nth-child(5)  { left: 17px; animation-duration: 400ms; }
+.bar:nth-child(6)  { left: 21px; animation-duration: 427ms; }
+.bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
+.bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
+.bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
+.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }
+
+.music--button:active {
+  transform: scaleX(1.2) scaleY(1.2);
+  transition: transform .2s ease-out;
+}

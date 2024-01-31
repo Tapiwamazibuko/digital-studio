@@ -1,8 +1,10 @@
 import React from "react";
+import useSound from "use-sound";
+import click from "../sounds/mouse-click.mp3"
 
 export default function EntryScreen(props){
     const [style, setStyle] = React.useState({})
-    const [lineStyle, setLineStyle] = React.useState({})
+    
     function buttonHover(){
         setStyle(() =>  {
             return {
@@ -27,24 +29,44 @@ export default function EntryScreen(props){
         })
     }
 
-    function lineHover(){
-        setLineStyle(() => {
-            return { 
-                
-                transform: "scaleX(0.1) translate(-10px, 0px)",
-                transition: "transform .2s ease-out",
-                cursor: "pointer"
-            }
-        })
-    }
+    
 
-    function lineLeave(){
-        setLineStyle(() => {
-            return { 
-                width: "112px"
-            }
-        })
-    }
+    const Container = () => {
+        const [play] = useSound(click);
+        const [lineStyle, setLineStyle] = React.useState({})
+
+        function lineHover(){
+            setLineStyle(() => {
+                return { 
+                    
+                    transform: "scaleX(0.1) translate(-10px, 0px)",
+                    transition: "transform .2s ease-out",
+                    cursor: "pointer"
+                }
+            })
+        }
+    
+        function lineLeave(){
+            setLineStyle(() => {
+                return { 
+                    width: "112px"
+                }
+            })
+        }
+        
+        return (
+            <div className="entry--container" style={{cursor: "pointer"}} 
+            onMouseOver={lineHover} onMouseLeave={lineLeave} onClick={() => {play(); props.music()} }
+            >
+                <h4 className="entry--text" >
+                    ENTER WITHOUT AUDIO
+                    <span className="left--span" style={lineStyle} 
+                    ></span>
+                    <span className="right--span"></span>
+                </h4>
+            </div>
+        )
+      };
 
 
     return (
@@ -54,14 +76,7 @@ export default function EntryScreen(props){
                 onClick={props.entry} onMouseOver={buttonHover} onMouseLeave={buttonLeave}
                 >Enter</button>
             </div>
-            <div className="entry--container" style={{cursor: "pointer"}} onMouseOver={lineHover} onMouseLeave={lineLeave}>
-                <h4 className="entry--text"  >
-                    ENTER WITHOUT AUDIO
-                    <span className="left--span" style={lineStyle} 
-                    ></span>
-                    <span className="right--span"></span>
-                </h4>
-            </div>
+            <Container/>
         </main>  
     )
 }

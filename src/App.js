@@ -10,14 +10,26 @@ import Menu from './components/Menu';
 function App() {
   const [isLoading, setIsLoading] = React.useState(true)
   const [hasEntered, setHasEntered] = React.useState(false)
+  const [musicPlaying, setMusicPlaying] = React.useState(true)
 
   const stillLoading = async () => {
-    setTimeout(() => {  setIsLoading(false); }, 4000);
+    setTimeout(() => {  setIsLoading(false); }, 3000);
   }
 
   function enter(){
     console.log("clicked!")
-    setHasEntered(true)
+    setTimeout(() => {  setHasEntered(true); }, 1000)
+  }
+
+  function enterMusic(){
+    console.log("clicked!")
+    toggleMusic()
+    setTimeout(() => {  setHasEntered(true); }, 1000)
+  }
+
+  function toggleMusic(){
+    setMusicPlaying((prevMusicPlaying) => !prevMusicPlaying)
+    console.log(musicPlaying)
   }
 
   stillLoading()
@@ -25,11 +37,11 @@ function App() {
   return (
     isLoading ? <LoadingScreen /> : hasEntered ?  
     <div>
-      <Header />
+      <Header music={musicPlaying} />
       <Menu />
-      <Index />
-      <Footer />
-    </div>   : <EntryScreen entry={() => enter()}/>
+      <Index music={musicPlaying}/>
+      <Footer music={musicPlaying}  toggle={toggleMusic}/>
+    </div>   : <EntryScreen entry={() => enter()} music={enterMusic}/>
   );
 }
 
