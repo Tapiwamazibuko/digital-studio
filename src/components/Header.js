@@ -20,13 +20,21 @@ export default function Header(props){
     return (
         <nav className="header--container" onMouseOver={playMusic} onPointerLeave={() => stop()}>
             <div className="header--left">
-                <h2>noname</h2>
-                <h2 style={style}>studio</h2>
+                <Link to={`/`}>
+                    <h2>noname</h2>
+                    <h2 style={style}>studio</h2>
+                </Link>           
             </div>
             <div className="header--right">
-                <h2>Index</h2>
-                <h2>Projects</h2>
-                <h2>Contact</h2>
+                <Link to={`/`}>
+                    <h2>Index</h2>
+                </Link>
+                <Link to={`/projects`}>
+                    <h2>Projects</h2>
+                </Link>
+                <Link to={`/contact`}>
+                    <h2>Contact</h2>
+                </Link>
                 <button type="button" onClick={openNav}>• •</button>
             </div>
         </nav>

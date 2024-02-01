@@ -3,6 +3,7 @@ import ProjectFooter from './components/ProjectFooter';
 import Header from './components/Header';
 import ProjectInfo from './components/ProjectsInfo';
 import projectData from './projectData';
+import Menu from './components/Menu';
 
 export default function Projects(){
 
@@ -16,6 +17,7 @@ export default function Projects(){
     return(
         <div>
             <Header />
+            <Menu />
             {dataElements}
             <ProjectFooter/>
         </div>
