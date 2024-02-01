@@ -360,6 +360,17 @@ body {
   font-weight: 275;
   line-height: normal;
   letter-spacing: -0.98px;
+  cursor: pointer;
+}
+
+.projects--button:hover{
+  background-color: #000;
+  color: white;
+  animation: jump .5s linear alternate infinite;
+}
+
+.projects--button:active{
+  animation: disappear 3s ease-out
 }
 
 .projects--background {

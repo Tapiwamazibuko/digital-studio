@@ -38,7 +38,7 @@ function App() {
     isLoading ? <LoadingScreen /> : hasEntered ?  
     <div>
       <Header music={musicPlaying} />
-      <Menu />
+      <Menu music={musicPlaying} />
       <Index music={musicPlaying}/>
       <Footer music={musicPlaying}  toggle={toggleMusic}/>
     </div>   : <EntryScreen entry={() => enter()} music={enterMusic}/>

@@ -1,13 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import daylight from "../sounds/daylight.mp3";
+import useSound from "use-sound";
 
-export default function Menu(){
+export default function Menu(props){
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
 
+    const [play, { stop }] = useSound(daylight);
+
+    function playMusic(){
+        if(props.music){play()}
+    }
+
     return(
-        <div id="mySidenav" className="menu--container">
+        <div id="mySidenav" className="menu--container" onMouseOver={playMusic} onPointerLeave={() => stop()}>
             <div className="menu--close">
                 <button type="button" onClick={closeNav} className="menu--button">&times;</button>
             </div>
