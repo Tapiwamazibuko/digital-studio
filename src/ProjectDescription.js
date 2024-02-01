@@ -5,6 +5,7 @@ import Project from './components/Project';
 import projectData from './projectData';
 import { useLoaderData } from 'react-router-dom';
 import Menu from './components/Menu';
+import React from 'react';
 
 function getProject(query) {
     const result = projectData.filter((item) => { return item.id == query})
@@ -19,10 +20,17 @@ export async function loader({ params }) {
 
 export default function ProjectDescription(){
     const { project } = useLoaderData();
+    const [musicPlaying, setMusicPlaying] = React.useState(true)
+
+    function toggleMusic(){
+        setMusicPlaying((prevMusicPlaying) => !prevMusicPlaying)
+        console.log(musicPlaying)
+      }
+
     return(
         <div>
-            <Header/>
-            <Menu />
+            <Header music={musicPlaying}/>
+            <Menu music={musicPlaying}/>
             <Project 
                 id={project.id}
                 name={project.name}
@@ -30,8 +38,9 @@ export default function ProjectDescription(){
                 services={project.services}
                 date={project.date}
                 client={project.client}
+                music={musicPlaying}
             />
-            <Footer/>
+            <Footer music={musicPlaying} toggle={toggleMusic}/>
         </div>
     )
 }

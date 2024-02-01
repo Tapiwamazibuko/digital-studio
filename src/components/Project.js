@@ -1,4 +1,6 @@
 import React from "react";
+import daylight from "../sounds/daylight.mp3";
+import useSound from "use-sound";
 
 export default function Project(props){
     const nameText = props.name.split(" ")
@@ -14,8 +16,14 @@ export default function Project(props){
     const serviceElements = props.services.map( data => {
         return <h4 key={data} className="project--description--text">{data}</h4>
       })
+
+    const [play, { stop }] = useSound(daylight);
+
+    function playMusic(){
+        if(props.music){play()}
+    }
     return (
-        <div className="project--background">
+        <div className="project--background" onMouseOver={playMusic} onPointerLeave={() => stop()}>
             <div>
                 <h4 className="project--top">{props.name}</h4>
             </div>
