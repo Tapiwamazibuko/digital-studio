@@ -291,6 +291,27 @@ body {
   cursor: pointer;
 }
 
+.index--button:hover{
+  background-color: #000;
+  color: white;
+  animation: jump .5s linear alternate infinite;
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0);}
+  40%  {transform: translate3d(0,20%,0);}
+  100% {transform: translate3d(0,50%,0);}
+}
+
+.index--button:active{
+  animation: disappear 3s ease-out
+}
+
+@keyframes disappear {
+  0% {opacity: 100%;}
+  100% {opacity: 0%;}
+}
+
 .footer--star{
   font-size: 30px;
   color: #919191;

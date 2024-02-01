@@ -11,12 +11,13 @@ import ErrorPage from './components/ErrorPage';
 import Projects from './Projects';
 import ProjectDescription, {loader as projectLoader} from './ProjectDescription';
 import ContactScreen from './ContactScreen';
+import {action as indexAction} from './components/Index';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
   },
   {
     path: "projects/",
