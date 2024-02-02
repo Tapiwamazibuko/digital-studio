@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import daylight from "../sounds/daylight.mp3";
 import useSound from "use-sound";
 
 export default function Menu(props){
+
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
@@ -14,24 +15,50 @@ export default function Menu(props){
         if(props.music){play()}
     }
 
+    const activeStyle = {
+        opacity: "40%",
+        fontFamily: "Poppins",
+        textDecoration: "underline"
+    }
+
+    const pendingStyle = {
+        opacity: "100%",
+        fontFamily: "DM Serif Display"
+    }
+
     return(
         <div id="mySidenav" className="menu--container" onMouseOver={playMusic} onPointerLeave={() => stop()}>
             <div className="menu--close">
                 <button type="button" onClick={closeNav} className="menu--button">&times;</button>
             </div>
             <div className="menu--links">
-                <Link className="menu--item">
+                <NavLink className="menu--item" to={`/`} 
+                    style={({ isActive}) =>
+                    isActive
+                      ? activeStyle
+                      : pendingStyle
+                  }>
                     <h4>01</h4>
                     <h1>Index</h1>
-                </Link>
-                <Link className="menu--item">
+                </NavLink>
+                <NavLink className="menu--item" to={`/projects`}
+                    style={({ isActive}) =>
+                    isActive
+                      ? activeStyle
+                      : pendingStyle
+                  }>
                     <h4>02</h4>
                     <h1>Projects</h1>
-                </Link>
-                <Link className="menu--item">
+                </NavLink>
+                <NavLink className="menu--item" to={`/contact`}
+                    style={({ isActive}) =>
+                    isActive
+                      ? activeStyle
+                      : pendingStyle
+                  }>
                     <h4>03</h4>
                     <h1>Contact</h1>
-                </Link>
+                </NavLink>
             </div>
             <div className="menu--socials">
                 <a href="https://twitter.com/?lang=en">

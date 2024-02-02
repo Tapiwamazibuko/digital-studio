@@ -477,6 +477,7 @@ body {
   z-index: 1;
   background: #F7F7F7;
   overflow-x: hidden;
+  overflow-y: hidden;
   right: 0; 
   display: flex;
   flex-direction: column;
@@ -535,6 +536,11 @@ body {
   letter-spacing: -0.7px;
 }
 
+.menu--socials > a > h5:hover {
+  transform: translateX(5px);
+  transition: transform .3s ease-in;
+}
+
 .menu--item{
   color: #000;
   text-decoration: none;
@@ -553,7 +559,7 @@ body {
 }
 
 .menu--item > h1{
-  font-family: "DM Serif Display";
+  font-family: inherit;
   font-size: 56px;
   font-style: normal;
   font-weight: 400;
@@ -561,6 +567,11 @@ body {
   letter-spacing: -3.36px;
   margin-block-start: 0px;
   margin-block-end: 0px;
+}
+
+.menu--item > h1:hover{
+  font-family: "Great Vibes";
+  transition: font-family .2s ease;
 }
 
 .contact--title{
