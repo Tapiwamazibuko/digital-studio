@@ -609,6 +609,7 @@ body {
   line-height: normal;
   letter-spacing: -0.98px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .contact--container{
